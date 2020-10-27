@@ -1,0 +1,44 @@
+
+using System;
+
+using System.IO; /// adicionei 
+using System.Collections.Generic;
+
+namespace Desafios
+{
+    class Program
+    {
+        static int nivel(int ent )
+        {
+            int nivel =0 ; 
+            
+            if ( ent < 10) return 1;
+            if ( ent >= 10 && ent<20) return 2;
+            if ( ent >= 20) return 3;
+
+            return (nivel);
+        }
+
+
+        static void Main(string[] args)
+        {
+            
+            
+                string ent;
+                // Read and display lines from the file until the end of
+                // the file is reached.
+
+                while (!string.IsNullOrEmpty(ent = Console.ReadLine()))
+                {
+                    List<int> numbers = new List<int>( Array.ConvertAll(Console.ReadLine().Split(" "), int.Parse) );
+                    numbers.Sort();
+                    numbers.Reverse();
+                    //Imprimevec(numbers);
+                    Console.WriteLine(nivel(numbers[0]));
+                }    
+             
+        }
+    }
+}
+
+

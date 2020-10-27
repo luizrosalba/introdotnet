@@ -522,6 +522,131 @@ mudamos o lanch.json para "console":"integratedTerminal" senão não conseguimos
 .vscode\launch.json
 
 
+## Design Patterns em C#
+
+Gang of Four - livro que consolidou melhores práticas o Design Patters - Elements of Reusable Object-Oriented Software (1994) Presciso ler !! 
+
+- singleton factory solid ,  observer , abstract factor ... 
+
+![](./designpatternsgof.PNG)
+
+Produtividade : Esses padrões já foram utilizados e testados inúmeras vezes. 
+
+Manutenção : Baseados em soluções de baixo acomplamento e padronização 
+
+- Temas universais 
+
+Desuso: Alguns Design patterns (DPs) surgiram para resolver problemas em linguagens que atualmente , a linguagem já corrigiu. 
+
+- Soluções prontas : 
+
+Um Dp não é uma solução pronta . Sabendo que ele existe, você sabe que um problema pode ser resolvido por ele. 
+
+- Bala de prata : Não é uma competição para ver quem usa mais padrões ! rs 
+
+### Solid 
+
+S - SRP Princípio da Responsabilidade Unica - Uma classe deve ter um e somente um motivo para mudar 
+
+O - OCP - Princípio Aberto-Fechado - Você deve ser capaz de estender um comportamento de uma classe sem modifica-lo 
+
+L - LSP - Princípio da Substituição de Liskov as classes bases devem ser substituíveis por suas classes derivadas 
+
+I - ISP - Princípio da Segregação da Interface - muitas interfaces específicas são melhores que uma interface unica 
+
+D - DIP - Principio da Inversão da dependência - Dependa de uma abstração e não de uma implementação 
+
+![](./solid.PNG)
+
+SRP - Mais facil de ler, testar, dar manutenção 
+
+OCP - muitos ifs , condicionais podem dar problemas ao estender uma classe ! 
+
+LSP - classes irmãs (derivadas) são intercambiáveis entre si, ou seja se temos uma classe quadrado que é irmã de uma classe retangulo ao fazer set area no quadrado que apenas faz que o lado seja igual a altura a área deve retornar o resultado correto ! nada de ficar realizado tratamentos, retornar nulo , pois ferra o principio LSP
+
+ISP - injeção de dependencia classes derivadas mais simples 
+
+DIP - polimorfismo, recebe algo abstrato e quem tah de fora injeta, função anônima (ex arrow function)
+
+
+### Problemas comuns de quem não usa solid 
+
+- Duplicidade de Código 
+
+- Codigo sem estrutura coesa 
+
+- Dificuldade de manter evoluir 
+
+- Pequenos ajustes quebram o codigo inclusive em outras partes do sistema 
+
+- dificuldade em criar testes unitários 
+
+- dificuldade de reaproveitar em outras aplicações 
+
+### principais Benefícios 
+
+- Facil manutenção , entendimento , orgtanização 
+
+- facil para adicionar novas funcionalidades
+
+- reaproveitar codigo e mudar o escopo do projeto 
+
+-  Neste respositório , tem um Batch que faz o code coverage do seu código 
+
+- Atenção ! Para saber se seu teste unitário cobre toda a aplicação faça um code coverage 
+
+- não adianta criar 30 testes testando a mesma logica 
+
+- CODE COVERAGE É  muito importante! deve estar acima de 80 % para subir em produção 
+
+
+### Vamos ver uma DP estrategy 
+
+aplicou startegy , inversão de controle 
+
+![](./strategy.PNG)
+
+
+- ele está fazendo testes AAA Arrange, Act e Assert 
+
+### Mais alguns padrões 
+
+- o detran nao tem web api 
+
+- como fazer consulta de débito ? 
+
+- o codigo deve ser capaz de produzir novas aplicações 
+
+-  vou ter várias implementações que variam por estado 
+
+- padrão de projeto : Factory 
+
+- placa e UF 
+
+- Pela UF a factory instancia o serviço correto do detran 
+
+  https://swagger.io/
+
+- nada de vários ifs , a classe factory tem só a responsabilidade de instanciar o estado correto 
+
+- Singleton 
+
+Addsingleton
+
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
